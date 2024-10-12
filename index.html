@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+          background-image: url('2.jpeg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+        html {
+  scroll-behavior: smooth;
+  
+}
+
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Humanoid Robot Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Humanoid Robot</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+            
+                    <a href="#top" class="back-to-top">Back to Top</a>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="Components.html">Components</a></li>
+                    <li><a href="What is Humanoid.html">What is Humanoid</a></li>
+                    <li><a href="Features.html">Features</a></li>
+                    <li><a href="Applications.html">Applications</a></li>
+                    <li><a href="Team.html">Team</a></li>
+                    <li><a href="Helper.html">Helper</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to the Future of Robotics</h2>
+            <p>Meet the Humanoid Robot, the next-generation robot designed to move, interact, and assist in a world shaped by technology.</p>
+            <a href="#overview" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="overview-section">
+        <div class="container">
+            <h2 class="section-title">Project Overview</h2>
+            <p style="font-size: 2.5rem;">This project focuses on building a humanoid robot with capabilities like vision, movement, and object interaction. It uses the <strong>ESP32-CAM</strong> module for real-time video streaming and object recognition. High-torque <strong>servos</strong> control the robot's limbs for smooth, human-like movements, while a <strong>servo driver</strong> ensures coordination. A <strong>lithium battery</strong> powers the robot, and <strong>jumper wires</strong> connect various components, enabling enhanced interaction through AI.</p>
+        </div>
+    </section>
+
+  
+
+<!-- CSS for Accordion -->
+<style>
+    .accordion {
+        border: 1px solid #000000;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    .accordion-item {
+        border-bottom: 1px solid #000000;
+    }
+    .accordion-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        cursor: pointer;
+        background-color: #000000;
+        border-radius: 5px;
+    }
+    .accordion-header:hover {
+        background-color: #2d2c2c;
+    }
+    .accordion-content {
+        display: none;
+        padding: 10px;
+        background-color: #005b85;
+    }
+</style>
+
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Humanoid Robot Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll('.fade-in');
+        
+        const options = {
+            root: null, // Use the viewport as the container
+            rootMargin: '0px',
+            threshold: 0.1 // Trigger when 10% of the section is visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Stop observing once it's visible
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+</script>
