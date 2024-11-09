@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
+    
     <style>
         body {
           background-image: url('2.jpeg');
@@ -24,7 +26,9 @@
     
 </head>
 
+
 <body>
+    
     <!-- Header Section -->
     <header>
         <div class="container">
@@ -34,7 +38,7 @@
             <nav>
                 <ul class="nav-links">
             
-                    <a href="#top" class="back-to-top">Back to Top</a>
+                    
                     <li><a href="#overview">Overview</a></li>
                     <li><a href="Components.html">Components</a></li>
                     <li><a href="What is Humanoid.html">What is Humanoid</a></li>
@@ -101,29 +105,8 @@
     <footer>
         <p>&copy; 2024 Humanoid Robot Project. All rights reserved.</p>
     </footer>
+    <script src="scripts.js"></script>
+    
 </body>
+
 </html>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const sections = document.querySelectorAll('.fade-in');
-        
-        const options = {
-            root: null, // Use the viewport as the container
-            rootMargin: '0px',
-            threshold: 0.1 // Trigger when 10% of the section is visible
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Stop observing once it's visible
-                }
-            });
-        }, options);
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    });
-</script>
